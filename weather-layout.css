@@ -1,0 +1,13 @@
+/* Keep the location visible while the content uses the full screen below it. */
+#weather-ready-app .phone .app-head { gap:12px;padding-top:calc(10px + env(safe-area-inset-top,0px));padding-bottom:10px;min-width:0; }
+#weather-ready-app .header-location { display:flex;align-items:center;gap:5px;flex:1;min-width:0;font-size:12px;font-weight:600;line-height:1.45; }
+#weather-ready-app .header-location svg { flex:none;width:14px;height:14px;color:var(--w-accent); }
+#weather-ready-app [data-header-location] { min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+#weather-ready-app .app-head .date { flex:none;font-size:10px;white-space:nowrap;color:var(--w-sub); }
+#weather-ready-app .location-setup-title { margin:0 0 12px;font-size:14px;font-weight:600; }
+#weather-ready-app .app-main .location-editor { margin:12px 0 0; }
+#weather-ready-app .location-editor .section-heading { margin:0 0 8px; }
+#weather-ready-app .location-editor .location-toolbar { margin:0 0 10px; }
+#weather-ready-app .empty-weather .gps-button { margin-top:14px; }
+#weather-ready-app .phone .nav-page-snapshot { position:absolute;flex:none;z-index:2;pointer-events:none;overflow:hidden;contain:layout paint; }
+@media(max-width:360px) { #weather-ready-app .phone .app-head { gap:8px; } #weather-ready-app .header-location { font-size:11px; } #weather-ready-app .app-head .date { font-size:9px; } }

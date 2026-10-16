@@ -1,0 +1,8 @@
+#weather-ready-app .outing-summary{margin:0 0 15px;padding:0 0 14px;border-bottom:1px solid var(--w-line);font-size:13px;line-height:1.65;color:var(--w-text);text-wrap:pretty}
+#weather-ready-app .preference-settings{padding:18px;margin:16px 0;isolation:isolate}
+#weather-ready-app .preference-settings h2{margin:0;font-size:16px;font-weight:650}
+#weather-ready-app .preference-settings p{margin:8px 0 14px;font-size:12px;color:var(--w-sub);line-height:1.6}
+#weather-ready-app .preference-options{display:flex;gap:5px;padding:4px;background:rgba(110,135,156,.09);border-radius:16px}
+#weather-ready-app .preference-options button{flex:1;min-width:0;min-height:44px;border:0;border-radius:12px;padding:9px 4px;background:transparent;color:var(--w-sub);font-size:11px;font-weight:550;transition:background .2s,color .2s,box-shadow .2s}
+#weather-ready-app .preference-options button[aria-pressed=true]{background:rgba(255,255,255,.52);color:var(--w-text);box-shadow:0 2px 7px rgba(34,62,83,.08),inset 0 1px 0 rgba(255,255,255,.55)}
+#weather-ready-app .phone[data-period=night] .preference-options button[aria-pressed=true]{background:rgba(196,213,237,.17);box-shadow:inset 0 1px 0 rgba(255,255,255,.14)}

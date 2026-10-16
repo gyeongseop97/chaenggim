@@ -1,0 +1,59 @@
+/* Installation UI lives outside the weather application's render tree. */
+#pwa-install-root { --pwa-glass:rgba(249,252,255,.96);--pwa-glass-soft:rgba(255,255,255,.68);--pwa-glass-line:rgba(255,255,255,.86);--pwa-glass-shadow:inset 0 1px 0 rgba(255,255,255,.94),0 10px 32px rgba(43,61,80,.12);color:#233142;font-family:"Pretendard","Noto Sans KR",system-ui,sans-serif;font-size:14px;line-height:1.55;color-scheme:light; }
+#pwa-install-root *, #pwa-install-root *::before, #pwa-install-root *::after { box-sizing:border-box; }
+#pwa-install-root [hidden] { display:none !important; }
+#pwa-install-root button { min-height:44px;border:1px solid rgba(255,255,255,.8);border-radius:14px;padding:10px 17px;font:inherit;font-weight:600;cursor:pointer;touch-action:manipulation;box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 2px 7px rgba(43,61,80,.05); }
+#pwa-install-root button:focus-visible, #pwa-install-root input:focus-visible { outline:3px solid #367da1;outline-offset:3px; }
+#pwa-install-root button:disabled { opacity:.55;cursor:wait; }
+#pwa-install-root button:active { transform:translateY(1px); }
+#pwa-install-root .pwa-primary { background:linear-gradient(165deg,rgba(230,240,247,.98),rgba(209,225,236,.9));color:#29495d;border-color:rgba(174,197,213,.45); }
+#pwa-install-root .pwa-primary:hover { background:linear-gradient(165deg,rgba(225,237,245,.98),rgba(201,221,234,.95)); }
+#pwa-install-root .pwa-secondary { background:var(--pwa-glass-soft);color:#42586a; }
+#pwa-install-root img { display:block;flex:none;border-radius:12px; }
+#pwa-install-root p { margin:0; }
+#pwa-install-root .pwa-install-banner { position:fixed;z-index:1000;bottom:calc(var(--app-nav-space,61px) + 12px);left:50%;transform:translateX(-50%);width:min(366px,calc(100% - 24px));padding:14px;border:1px solid var(--pwa-glass-line);border-radius:23px;background:var(--pwa-glass);box-shadow:var(--pwa-glass-shadow);animation:pwa-arrive .25s ease-out; }
+#pwa-install-root .pwa-banner-summary { display:flex;align-items:center;gap:11px; }
+#pwa-install-root .pwa-banner-summary div { min-width:0; }
+#pwa-install-root .pwa-banner-summary strong { display:block;font-size:14px;font-weight:650;letter-spacing:-.35px; }
+#pwa-install-root .pwa-banner-summary p { margin-top:2px;font-size:12px;color:#647286; }
+#pwa-install-root .pwa-banner-actions { display:grid;grid-template-columns:1fr 1.45fr;gap:8px;margin-top:12px; }
+body.chaenggim-install-visible #weather-ready-app .app-scroll { padding-bottom:var(--pwa-install-space,152px); }
+#pwa-install-root .pwa-install-dialog { position:fixed;inset:0;width:min(398px,calc(100% - 24px));max-height:calc(100vh - 32px);max-height:calc(100dvh - max(16px,env(safe-area-inset-top,0px)) - max(16px,env(safe-area-inset-bottom,0px)));margin:auto;padding:30px 22px 20px;border:1px solid var(--pwa-glass-line);border-radius:28px;background:var(--pwa-glass);color:#233142;overflow:auto;overscroll-behavior:contain;box-shadow:inset 0 1px 0 rgba(255,255,255,.96),0 22px 64px rgba(31,48,68,.2); }
+#pwa-install-root .pwa-install-dialog:not([open]) { display:none; }
+#pwa-install-root .pwa-install-dialog::backdrop { background:rgba(35,50,68,.23);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px); }
+#pwa-install-root .pwa-guide-close { display:grid;place-items:center;position:absolute;top:6px;right:6px;width:44px;padding:0;border-color:transparent;background:transparent;box-shadow:none;color:#586d7a;font-size:26px;line-height:1; }
+#pwa-install-root .pwa-guide-brand { display:flex;align-items:center;gap:12px;padding-top:8px; }
+#pwa-install-root .pwa-guide-brand div { min-width:0; }
+#pwa-install-root .pwa-eyebrow { color:#647286;font-size:11px; }
+#pwa-install-root h2 { margin:2px 0 0;font-size:20px;letter-spacing:-.7px;line-height:1.4;font-weight:700; }
+#pwa-install-root #pwa-guide-description { margin-top:16px;font-size:14px; }
+#pwa-install-root .pwa-guide-note { margin-top:12px;padding:12px;border:1px solid rgba(255,255,255,.78);border-radius:15px;background:rgba(230,239,246,.62);color:#3c5a6f;font-size:12px;line-height:1.7;box-shadow:inset 0 1px 0 rgba(255,255,255,.65); }
+#pwa-install-root .pwa-safari-path { display:flex;align-items:center;justify-content:center;gap:12px;margin-top:16px;padding:14px 8px;border:1px solid var(--pwa-glass-line);border-radius:15px;background:var(--pwa-glass-soft);color:#33586b;font-size:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.7); }
+#pwa-install-root .pwa-safari-path span { display:flex;align-items:center;gap:6px; }
+#pwa-install-root .pwa-safari-path svg { flex:none;width:24px;height:24px; }
+#pwa-install-root .pwa-guide-steps { display:grid;gap:14px;margin:20px 0;padding:0;list-style:none;counter-reset:pwa-step; }
+#pwa-install-root .pwa-guide-steps li { display:grid;grid-template-columns:26px 1fr;gap:10px;counter-increment:pwa-step;font-size:13px;line-height:1.7;overflow-wrap:anywhere; }
+#pwa-install-root .pwa-guide-steps li::before { content:counter(pwa-step);display:grid;place-items:center;width:26px;height:26px;border:1px solid rgba(255,255,255,.88);border-radius:9px;background:rgba(225,236,244,.7);color:#33586b;font-size:12px;font-weight:700;box-shadow:inset 0 1px 0 rgba(255,255,255,.8); }
+#pwa-install-root .pwa-guide-tip { color:#647286;font-size:11px;line-height:1.7; }
+#pwa-install-root .pwa-copy-row { display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:18px; }
+#pwa-install-root .pwa-copy-row button { font-size:12px;padding-inline:13px; }
+#pwa-install-root .pwa-copy-status { font-size:12px;color:#376d50; }
+#pwa-install-root .pwa-url-fallback { margin-top:10px; }
+#pwa-install-root .pwa-url-fallback label { display:block;margin-bottom:6px;color:#647286;font-size:11px; }
+#pwa-install-root .pwa-url-fallback input { width:100%;min-width:0;min-height:44px;padding:10px;border:1px solid rgba(179,198,212,.58);border-radius:12px;font:inherit;font-size:16px;color:#233142;background:rgba(255,255,255,.76);box-shadow:inset 0 1px 2px rgba(43,61,80,.04); }
+#pwa-install-root .pwa-guide-done, #pwa-install-root .pwa-native-install { width:100%;margin-top:16px; }
+#pwa-install-root.pwa-fallback-modal::before { content:"";position:fixed;inset:0;z-index:1999;background:rgba(35,50,68,.23);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px); }
+#pwa-install-root.pwa-fallback-modal .pwa-install-dialog { z-index:2000; }
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  #pwa-install-root { --pwa-glass:linear-gradient(145deg,rgba(255,255,255,.8),rgba(245,250,255,.7)); }
+  #pwa-install-root .pwa-install-banner, #pwa-install-root .pwa-install-dialog { -webkit-backdrop-filter:blur(24px) saturate(115%);backdrop-filter:blur(24px) saturate(115%); }
+}
+@media (prefers-reduced-transparency:reduce), (prefers-contrast:more) {
+  #pwa-install-root { --pwa-glass:#f8fbfe;--pwa-glass-soft:#f4f7fa;--pwa-glass-line:#becbd6; }
+  #pwa-install-root .pwa-install-banner, #pwa-install-root .pwa-install-dialog, #pwa-install-root .pwa-install-dialog::backdrop, #pwa-install-root.pwa-fallback-modal::before { -webkit-backdrop-filter:none;backdrop-filter:none; }
+  #pwa-install-root .pwa-guide-note, #pwa-install-root .pwa-guide-steps li::before, #pwa-install-root .pwa-url-fallback input { background:#edf3f8;border-color:#becbd6; }
+  #pwa-install-root .pwa-primary { background:#d8e6f0;border-color:#a6bac9; }
+}
+@keyframes pwa-arrive { from { opacity:0;translate:0 8px; } to { opacity:1;translate:0 0; } }
+@media (max-width:340px) { #pwa-install-root .pwa-install-dialog { padding-inline:17px; } #pwa-install-root h2 { font-size:18px; } #pwa-install-root .pwa-banner-summary { gap:9px; } #pwa-install-root .pwa-banner-summary strong { font-size:13px; } }
+@media (prefers-reduced-motion:reduce) { #pwa-install-root *, #pwa-install-root *::before, #pwa-install-root *::after { animation:none !important;transition:none !important; } }

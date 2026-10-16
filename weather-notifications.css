@@ -1,0 +1,22 @@
+#weather-ready-app .notification-settings {margin-block:14px;padding:18px;}
+#weather-ready-app .notification-title {display:flex;align-items:center;justify-content:space-between;gap:12px;}
+#weather-ready-app .notification-title h2 {margin:0;font-size:17px;font-weight:650;}
+#weather-ready-app .notification-toggle {display:inline-flex;align-items:center;justify-content:center;gap:8px;flex:none;border:0;background:transparent;color:var(--w-text);font:inherit;font-size:13px;min-height:44px;padding:4px 0 4px 6px;cursor:pointer;}
+#weather-ready-app .notification-toggle:disabled {opacity:.5;cursor:default;}
+#weather-ready-app .notification-switch-track {width:38px;height:24px;display:block;border-radius:20px;background:rgba(110,128,145,.25);box-shadow:inset 0 1px 2px rgba(21,45,65,.12);padding:3px;transition:background .2s ease;}
+#weather-ready-app .notification-switch-track span {display:block;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.95);box-shadow:0 1px 4px rgba(27,47,62,.2);transition:transform .2s ease;}
+#weather-ready-app .notification-toggle[aria-checked=true] .notification-switch-track {background:var(--w-accent);}
+#weather-ready-app .notification-toggle[aria-checked=true] .notification-switch-track span {transform:translateX(14px);}
+#weather-ready-app .notification-policy,#weather-ready-app .notification-privacy,#weather-ready-app .notification-status {font-size:13px;line-height:1.6;color:var(--w-sub);margin:10px 0 0;overflow-wrap:anywhere;}
+#weather-ready-app .notification-consent {display:flex;align-items:flex-start;gap:9px;font-size:13px;line-height:1.55;color:var(--w-sub);margin-top:14px;cursor:pointer;}
+#weather-ready-app .notification-consent input {flex:none;width:17px;height:17px;min-width:17px;margin:2px 0 0;accent-color:var(--w-accent);}
+#weather-ready-app .notification-status {color:var(--w-text);}
+#weather-ready-app .notification-time {display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:15px;font-size:13px;line-height:1.5;color:var(--w-text);}
+#weather-ready-app .notification-time input {box-sizing:border-box;flex:0 0 auto;min-width:0;width:124px;max-width:48%;min-height:42px;padding:8px 10px;border:1px solid var(--w-line);border-radius:12px;background:var(--glass-control,rgba(255,255,255,.5));color:var(--w-text);font:inherit;font-variant-numeric:tabular-nums;text-align:center;}
+#weather-ready-app .notification-time input:focus-visible {outline:2px solid var(--w-accent);outline-offset:3px;}
+#weather-ready-app .notification-actions {display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:4px;}
+#weather-ready-app .notification-actions:empty {display:none;}
+#weather-ready-app .notification-actions button {min-height:40px;padding:4px 0;font-size:13px;}
+#weather-ready-app .notification-actions button:disabled {opacity:.5;}
+#weather-ready-app .notification-toggle:focus-visible,#weather-ready-app .notification-actions button:focus-visible {outline:2px solid var(--w-accent);outline-offset:4px;border-radius:7px;}
+@media (prefers-reduced-motion:reduce) {#weather-ready-app .notification-switch-track,#weather-ready-app .notification-switch-track span {transition:none;}}

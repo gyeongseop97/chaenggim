@@ -1,0 +1,192 @@
+/* Weather light passes through quiet glass surfaces. Forecast colors remain in weather-live.css. */
+#weather-ready-app .stage .phone {
+  --w-text:#263747;
+  --w-sub:#546a7e;
+  --w-accent:#42627b;
+  --w-line:rgba(71,100,124,.13);
+  --w-soft:rgba(255,255,255,.34);
+  --glass-halo:215,233,244;
+  --glass-sky-top:#d0e2ee;
+  --glass-sky-mid:#e6edf2;
+  --glass-sky-base:#e0e8ee;
+  --glass-surface-rgb:246,251,255;
+  --glass-surface:rgba(var(--glass-surface-rgb),.86);
+  --glass-control:rgba(255,255,255,.52);
+  --glass-border:rgba(255,255,255,.86);
+  --glass-shine:rgba(255,255,255,.96);
+  --glass-rim-top:rgba(255,255,255,.98);
+  --glass-rim-side:rgba(255,255,255,.74);
+  --glass-rim-bottom:rgba(84,111,132,.2);
+  --glass-shadow:0 12px 26px rgba(39,67,88,.105),0 2px 5px rgba(39,67,88,.045),inset 0 1px 0 rgba(255,255,255,.96),inset 1px 0 0 rgba(255,255,255,.54),inset 0 -1px 0 rgba(72,103,127,.09);
+  background:radial-gradient(ellipse at 92% 3%,rgba(var(--glass-halo),.84),transparent 55%),radial-gradient(ellipse at 5% 72%,rgba(255,255,255,.28),transparent 64%),linear-gradient(165deg,var(--glass-sky-top),var(--glass-sky-mid) 48%,var(--glass-sky-base));
+}
+#weather-ready-app .stage .phone[data-sky=clear] {
+  --w-accent:#6c5b3f;
+  --glass-halo:255,241,207;
+  --glass-sky-top:#d9eaf1;
+  --glass-sky-mid:#f1e8d3;
+  --glass-sky-base:#f6f1e4;
+  --glass-surface-rgb:255,252,241;
+}
+#weather-ready-app .stage .phone[data-sky=partly] {
+  --w-accent:#496777;
+  --glass-halo:246,239,220;
+  --glass-sky-top:#c9dfea;
+  --glass-sky-mid:#e2e9eb;
+  --glass-sky-base:#eceee7;
+  --glass-surface-rgb:249,253,253;
+}
+#weather-ready-app .stage .phone[data-sky=cloud] {
+  --w-accent:#465e78;
+  --glass-halo:220,228,237;
+  --glass-sky-top:#becddc;
+  --glass-sky-mid:#d7e0e9;
+  --glass-sky-base:#e2e9ef;
+  --glass-surface-rgb:244,249,255;
+}
+#weather-ready-app .stage .phone[data-sky=rain] {
+  --w-accent:#365e78;
+  --glass-halo:193,214,228;
+  --glass-sky-top:#aabfce;
+  --glass-sky-mid:#c8d7e1;
+  --glass-sky-base:#dbe5ec;
+  --glass-surface-rgb:239,248,254;
+}
+#weather-ready-app .stage .phone[data-sky=snow] {
+  --w-accent:#3d6776;
+  --glass-halo:247,255,255;
+  --glass-sky-top:#c8e0e9;
+  --glass-sky-mid:#e3f0f5;
+  --glass-sky-base:#eef6f6;
+  --glass-surface-rgb:248,255,255;
+}
+#weather-ready-app .stage .phone[data-period=dawn] {
+  --w-accent:#785f52;
+  --glass-halo:255,235,211;
+  --glass-sky-top:#dfcedc;
+  --glass-sky-mid:#f2dfd0;
+  --glass-sky-base:#f1ede6;
+  --glass-surface-rgb:255,248,242;
+}
+#weather-ready-app .stage .phone[data-period=evening] {
+  --w-accent:#77596f;
+  --glass-halo:246,221,209;
+  --glass-sky-top:#d0c7e0;
+  --glass-sky-mid:#e9d3d6;
+  --glass-sky-base:#e7e4ee;
+  --glass-surface-rgb:255,245,251;
+}
+#weather-ready-app .stage .phone[data-period=night] {
+  --w-text:#ecf3fa;
+  --w-sub:#bacbdc;
+  --w-accent:#c2d7ea;
+  --w-line:rgba(202,223,243,.15);
+  --w-soft:rgba(211,231,252,.09);
+  --glass-halo:107,137,174;
+  --glass-sky-top:#162a43;
+  --glass-sky-mid:#192c42;
+  --glass-sky-base:#102135;
+  --glass-surface-rgb:33,51,71;
+  --glass-surface:rgba(var(--glass-surface-rgb),.9);
+  --glass-control:rgba(212,231,250,.13);
+  --glass-border:rgba(223,239,255,.29);
+  --glass-shine:rgba(237,247,255,.38);
+  --glass-rim-top:rgba(237,247,255,.43);
+  --glass-rim-side:rgba(223,239,255,.25);
+  --glass-rim-bottom:rgba(8,21,37,.35);
+  --glass-shadow:0 12px 28px rgba(3,13,27,.24),0 2px 6px rgba(3,13,27,.12),inset 0 1px 0 rgba(237,247,255,.26),inset 1px 0 0 rgba(225,242,255,.1),inset 0 -1px 0 rgba(195,223,246,.065);
+  background:radial-gradient(ellipse at 95% 6%,rgba(var(--glass-halo),.22),transparent 56%),radial-gradient(ellipse at 2% 70%,rgba(86,128,167,.12),transparent 62%),linear-gradient(155deg,var(--glass-sky-top),var(--glass-sky-mid) 54%,var(--glass-sky-base));
+}
+#weather-ready-app .stage .phone[data-period=night][data-sky=clear] { --glass-sky-top:#172942;--glass-sky-mid:#14263e;--glass-sky-base:#0e1d32;--glass-halo:131,153,200; }
+#weather-ready-app .stage .phone[data-period=night][data-sky=cloud] { --glass-sky-top:#26394e;--glass-sky-mid:#24364b;--glass-sky-base:#192b3f;--glass-halo:132,153,177; }
+#weather-ready-app .stage .phone[data-period=night][data-sky=rain] { --glass-sky-top:#233c50;--glass-sky-mid:#1b3246;--glass-sky-base:#142a3e;--glass-halo:100,145,172; }
+#weather-ready-app .stage .phone[data-period=night][data-sky=snow] { --glass-sky-top:#294653;--glass-sky-mid:#203a4b;--glass-sky-base:#192f43;--glass-halo:147,192,201; }
+#weather-ready-app .phone .ambient-glow { width:420px;height:420px;right:auto;left:calc(var(--solar-halo-x,.9)*100% - 210px);top:calc(var(--solar-halo-y,.05)*100% - 210px);background:radial-gradient(circle,rgba(var(--glass-halo),.64),transparent 70%);opacity:.66; }
+#weather-ready-app .phone .ambient-cloud { display:block;width:74%;height:13%;top:3%;right:auto;left:-10%;background:radial-gradient(ellipse at 26% 55%,rgba(255,255,255,.47),transparent 53%),radial-gradient(ellipse at 65% 47%,rgba(255,255,255,.42),transparent 62%);filter:blur(13px);opacity:var(--solar-cloud-density,.42);animation:wr-solar-cloud 120s ease-in-out infinite; }
+#weather-ready-app .phone .ambient-cloud.second { top:13%;left:53%;width:66%;height:14%;opacity:calc(var(--solar-cloud-density,.42)*.72);animation-duration:80s;animation-delay:-20s; }
+#weather-ready-app .phone[data-sky=clear] .ambient-cloud { display:none; }
+#weather-ready-app .phone[data-sky=cloud] .ambient-glow,#weather-ready-app .phone[data-sky=rain] .ambient-glow { opacity:.22; }
+#weather-ready-app .phone .ambient-rain { display:none;inset:0;opacity:1;background:none;animation:none;transform:none; }
+#weather-ready-app .phone .ambient-rain::before,#weather-ready-app .phone .ambient-rain::after { content:"";position:absolute;inset:-160px -100px;pointer-events:none; }
+#weather-ready-app .phone[data-sky=rain] .ambient-rain,#weather-ready-app .phone[data-sky=snow] .ambient-rain { display:block; }
+#weather-ready-app .phone[data-sky=rain] .ambient-rain::before,
+#weather-ready-app .phone[data-sky=rain] .ambient-rain::after { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='140'%3E%3Cpath d='M24 14l-4 24M66 81l-3 17' fill='none' stroke='%23d5e7f2' stroke-width='.8' stroke-linecap='round'/%3E%3C/svg%3E");background-size:80px 140px;opacity:.42;animation:wr-solar-rain 2s linear infinite; }
+#weather-ready-app .phone[data-sky=rain] .ambient-rain::after { background-size:114px 200px;opacity:.2;animation-duration:3s;animation-name:wr-solar-rain-far; }
+#weather-ready-app .phone[data-sky=snow] .ambient-rain::before,
+#weather-ready-app .phone[data-sky=snow] .ambient-rain::after,
+#weather-ready-app .phone[data-weather-kind=mixed] .ambient-rain::after { background-image:radial-gradient(circle at 21px 23px,rgba(255,255,255,.86) 0 1.15px,transparent 2px),radial-gradient(circle at 87px 97px,rgba(255,255,255,.6) 0 .8px,transparent 1.7px);background-size:124px 146px;opacity:.65;animation:wr-solar-snow 20s linear infinite; }
+#weather-ready-app .phone[data-sky=snow] .ambient-rain::after { background-size:178px 210px;opacity:.36;animation-duration:24s;animation-name:wr-solar-snow-far; }
+#weather-ready-app .phone .stars { opacity:.7; }
+#weather-ready-app .phone[data-period=night] .ambient-glow { background:radial-gradient(circle,rgba(209,231,255,.14),transparent 70%); }
+#weather-ready-app .phone[data-period=night] .ambient-cloud { opacity:calc(var(--solar-cloud-density,.42)*.28); }
+#weather-ready-app .phone[data-weather-kind=fog] .ambient-cloud { width:115%;height:23%;filter:blur(22px);opacity:.43; }
+@keyframes wr-solar-cloud { 0%,100% { transform:translateX(-2%); } 50% { transform:translateX(2%); } }
+@keyframes wr-solar-rain { from { background-position:0 0; } to { background-position:0 140px; } }
+@keyframes wr-solar-rain-far { from { background-position:0 0; } to { background-position:0 200px; } }
+@keyframes wr-solar-snow { from { background-position:0 0,0 0; } to { background-position:124px 146px,124px 146px; } }
+@keyframes wr-solar-snow-far { from { background-position:0 0,0 0; } to { background-position:178px 210px,178px 210px; } }
+@media (prefers-reduced-motion:reduce) {
+  #weather-ready-app .phone :is(.ambient-cloud,.ambient-rain),
+  #weather-ready-app .phone .ambient-rain::before,#weather-ready-app .phone .ambient-rain::after { animation:none !important; }
+}
+
+#weather-ready-app .phone :is(.weather,.prep,.palette,.location-editor,.schedule-card,.schedule-form,.kma-warnings,.weather-status,.theme-status,.notice,.hourly-chart) {
+  border:1px solid var(--glass-border);
+  border-top-color:var(--glass-rim-top);
+  border-left-color:var(--glass-rim-side);
+  border-bottom-color:var(--glass-rim-bottom);
+  background:radial-gradient(ellipse at 0 0,rgba(255,255,255,.4),transparent 58%),linear-gradient(142deg,rgba(255,255,255,.18),rgba(255,255,255,.015) 60%),var(--glass-surface);
+  box-shadow:var(--glass-shadow);
+}
+#weather-ready-app .phone :is(.weather,.prep,.location-editor,.schedule-form,.hourly-chart) { border-radius:23px; }
+#weather-ready-app .phone :is(.palette,.schedule-card,.kma-warnings,.weather-status,.notice) { border-radius:17px; }
+#weather-ready-app .phone .notice.rain { color:var(--w-accent); }
+#weather-ready-app .phone .weather-scene { opacity:.6; }
+#weather-ready-app .phone :is(.air-quality,.outfit-summary,.item-row) { border-color:var(--w-line); }
+#weather-ready-app .phone .item-icon { background:var(--glass-control);box-shadow:inset 0 1px 0 rgba(255,255,255,.36);border-radius:11px; }
+#weather-ready-app .phone .color-dot { box-shadow:0 1px 3px rgba(36,56,73,.05); }
+#weather-ready-app .phone .location-select { border:1px solid rgba(255,255,255,.35);border-radius:16px;background:rgba(255,255,255,.17);padding:6px 9px; }
+#weather-ready-app .phone .add-actions button,
+#weather-ready-app .phone .place-search button,
+#weather-ready-app .phone :is(.refresh-button,.gps-button,.install-entry,.cancel-button,.palette-next,.save-button) {
+  border:1px solid var(--glass-border);
+  border-radius:15px;
+  background:linear-gradient(145deg,rgba(255,255,255,.18),transparent),var(--glass-control);
+  box-shadow:inset 0 1px 0 var(--glass-shine),inset 0 -1px 0 rgba(80,110,134,.07),0 3px 10px rgba(34,64,89,.065);
+  color:var(--w-accent);
+}
+#weather-ready-app .phone .palette-next { background:transparent;border-color:transparent;box-shadow:none; }
+#weather-ready-app .phone .save-button,#weather-ready-app .phone .place-search button { background:rgba(110,151,180,.15);border-color:rgba(255,255,255,.7);font-weight:600; }
+#weather-ready-app .phone :is(.place-search input,.schedule-form input[type=text],.schedule-form input[type=time],.schedule-form input[type=date],.schedule-form select) {
+  border-color:var(--glass-border);
+  border-radius:13px;
+  background:var(--glass-control);
+  box-shadow:inset 0 1px 3px rgba(51,78,102,.035),0 1px 0 rgba(255,255,255,.18);
+  color:var(--w-text);
+}
+#weather-ready-app .phone .day-choice { background:var(--glass-control);border:1px solid transparent;border-radius:12px; }
+#weather-ready-app .phone .day-choice:has(input:checked) { border-color:var(--glass-border);background:rgba(109,151,185,.13);box-shadow:inset 0 1px 0 var(--glass-shine); }
+#weather-ready-app .phone .enable-toggle input { background:rgba(101,128,153,.18);box-shadow:inset 0 1px 3px rgba(31,51,71,.08); }
+#weather-ready-app .phone .enable-toggle input:checked { background:rgba(80,123,156,.48); }
+#weather-ready-app .phone .enable-toggle input:before,#weather-ready-app .phone .enable-toggle input:checked:before { background:#f8fcff;box-shadow:0 1px 4px rgba(25,50,73,.16); }
+#weather-ready-app .phone .app-head { background:linear-gradient(rgba(255,255,255,.15),transparent); }
+#weather-ready-app .phone .bottom-nav { background:var(--glass-control);border-top:1px solid var(--glass-border);box-shadow:0 -4px 22px rgba(41,67,86,.025),inset 0 1px 0 rgba(255,255,255,.25); }
+#weather-ready-app .phone .bottom-nav button { border:1px solid transparent;border-radius:17px;transform:none; }
+#weather-ready-app .phone .bottom-nav button[aria-current=page] { background:var(--glass-control);border-color:var(--glass-border);color:var(--w-accent);box-shadow:var(--glass-shadow);transform:none; }
+#weather-ready-app .phone .toast { background:var(--glass-surface);border:1px solid var(--glass-border);border-top-color:var(--glass-rim-top);border-bottom-color:var(--glass-rim-bottom);color:var(--w-text);box-shadow:var(--glass-shadow);border-radius:17px; }
+#weather-ready-app .phone .kma-warnings li { border-left-width:2px; }
+#weather-ready-app .phone[data-period=night] :is(.weather,.prep,.palette,.location-editor,.schedule-card,.schedule-form,.kma-warnings,.weather-status,.theme-status,.notice,.hourly-chart) { background:radial-gradient(ellipse at 0 0,rgba(222,240,255,.13),transparent 58%),linear-gradient(145deg,rgba(214,233,253,.055),transparent 65%),var(--glass-surface); }
+#weather-ready-app .phone[data-period=night] .location-select { background:rgba(220,238,255,.035);border-color:rgba(223,239,255,.09); }
+
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  #weather-ready-app .stage .phone { --glass-surface:rgba(var(--glass-surface-rgb),.52); }
+  #weather-ready-app .stage .phone[data-period=night] { --glass-surface:rgba(181,210,240,.12); }
+  #weather-ready-app .phone :is(.weather,.prep,.palette,.location-editor,.schedule-card,.schedule-form,.kma-warnings,.weather-status,.theme-status,.notice,.hourly-chart,.toast) { -webkit-backdrop-filter:blur(24px) saturate(118%);backdrop-filter:blur(24px) saturate(118%); }
+  #weather-ready-app .phone .bottom-nav { -webkit-backdrop-filter:blur(24px) saturate(130%);backdrop-filter:blur(24px) saturate(130%); }
+}
+@media (prefers-reduced-transparency:reduce), (prefers-contrast:more) {
+  #weather-ready-app .stage .phone { --glass-surface:#f5f8fb;--glass-control:#edf3f8;--glass-border:#bacbda;--glass-rim-top:#bacbda;--glass-rim-side:#bacbda;--glass-rim-bottom:#bacbda;--glass-shadow:none; }
+  #weather-ready-app .stage .phone[data-period=night] { --glass-surface:#23374d;--glass-control:#2a4057;--glass-border:#6c849b;--glass-rim-top:#6c849b;--glass-rim-side:#6c849b;--glass-rim-bottom:#6c849b; }
+  #weather-ready-app .stage .phone [data-weather-tone] { --forecast-bg:var(--glass-surface);--forecast-border:var(--glass-border);--forecast-sheen:transparent;--forecast-highlight:transparent; }
+  #weather-ready-app .phone :is(.weather,.prep,.palette,.location-editor,.schedule-card,.schedule-form,.kma-warnings,.weather-status,.theme-status,.notice,.hourly-chart,.toast,.bottom-nav) { -webkit-backdrop-filter:none;backdrop-filter:none; }
+}

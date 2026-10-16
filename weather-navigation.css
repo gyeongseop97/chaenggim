@@ -1,0 +1,59 @@
+/* A single glass selection follows the finger without blurring every frame. */
+#weather-ready-app .phone .bottom-nav.nav-has-lens {
+  position:relative;
+  isolation:isolate;
+  touch-action:none;
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-touch-callout:none;
+}
+#weather-ready-app .phone .bottom-nav.nav-has-lens .nav-glass-lens {
+  position:absolute;
+  box-sizing:border-box;
+  inset:0 auto auto 0;
+  z-index:0;
+  border:1px solid var(--glass-border,rgba(255,255,255,.7));
+  border-radius:17px;
+  background:linear-gradient(155deg,rgba(255,255,255,.46),rgba(255,255,255,.09) 55%,rgba(255,255,255,.2)),var(--glass-control,rgba(255,255,255,.35));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.88),inset 0 -1px 0 rgba(255,255,255,.23),0 3px 12px rgba(38,65,88,.07);
+  pointer-events:none;
+  transform-origin:center;
+  will-change:transform;
+}
+#weather-ready-app .phone .bottom-nav.nav-has-lens .nav-glass-lens::before {
+  content:"";
+  position:absolute;
+  inset:1px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:inherit;
+}
+#weather-ready-app .phone .bottom-nav.nav-has-lens button {
+  position:relative;
+  z-index:1;
+  touch-action:none;
+  transition:color .2s ease;
+}
+#weather-ready-app .phone .bottom-nav.nav-has-lens button[aria-current=page],
+#weather-ready-app .phone .bottom-nav.nav-has-lens button:hover,
+#weather-ready-app .phone .bottom-nav.nav-has-lens button:active {
+  background:transparent;
+  border-color:transparent;
+  box-shadow:none;
+  transform:none;
+}
+#weather-ready-app .phone .bottom-nav.nav-has-lens button[aria-current=page] { color:var(--w-accent); }
+#weather-ready-app .phone .bottom-nav.nav-has-lens button[aria-current=page] { cursor:grab; }
+#weather-ready-app .phone .bottom-nav.nav-has-lens[data-dragging=true],
+#weather-ready-app .phone .bottom-nav.nav-has-lens[data-dragging=true] button { cursor:grabbing; }
+#weather-ready-app .phone .bottom-nav.nav-has-lens button:focus-visible { outline:2px solid var(--w-accent);outline-offset:-3px; }
+#weather-ready-app .phone[data-period=night] .bottom-nav.nav-has-lens .nav-glass-lens {
+  background:linear-gradient(155deg,rgba(233,246,255,.14),rgba(208,232,255,.025) 55%,rgba(214,235,255,.07)),var(--glass-control,rgba(211,232,252,.09));
+  box-shadow:inset 0 1px 0 rgba(237,247,255,.27),inset 0 -1px 0 rgba(218,239,255,.045),0 3px 12px rgba(3,15,28,.13);
+}
+@media (prefers-reduced-transparency:reduce), (prefers-contrast:more) {
+  #weather-ready-app .phone .bottom-nav.nav-has-lens .nav-glass-lens { background:var(--glass-control,var(--w-soft));border-color:var(--w-accent);box-shadow:none; }
+}
+@media (prefers-reduced-motion:reduce) {
+  #weather-ready-app .phone .bottom-nav.nav-has-lens .nav-glass-lens { will-change:auto; }
+}

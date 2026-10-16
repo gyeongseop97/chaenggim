@@ -1,0 +1,11 @@
+#weather-ready-app .phone .air-quality { display:flex;align-items:center;flex-wrap:wrap;gap:6px;border-top:1px solid var(--w-line); }
+#weather-ready-app .phone .air-quality > svg { flex:none; }
+#weather-ready-app .phone .air-pollutants { display:flex;flex:1;flex-wrap:wrap;gap:5px 14px;min-width:0; }
+#weather-ready-app .phone .air-pollutants > span { display:inline-flex;align-items:center;gap:6px;font-size:12px;white-space:nowrap; }
+#weather-ready-app .phone .air-pollutants b { display:inline;font-size:13px;flex-basis:auto;line-height:1.6; }
+#weather-ready-app .phone .air-pollutants b[data-level=good] { color:var(--w-good); }
+#weather-ready-app .phone .air-pollutants b[data-level=normal] { color:var(--w-normal); }
+#weather-ready-app .phone .air-pollutants b[data-level=bad] { color:var(--w-bad); }
+#weather-ready-app .phone .air-pollutants b[data-level=very-bad] { color:var(--w-danger); }
+#weather-ready-app .phone .air-pollutants b[data-level=unknown] { color:var(--w-sub); }
+#weather-ready-app .phone .air-quality > small { flex-basis:100%;margin:0 0 0 22px;font-size:11px;color:var(--w-sub); }
